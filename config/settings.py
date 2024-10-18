@@ -27,7 +27,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'SECRET_KEY')
 DEBUG = int(os.environ.get('DEBUG', 1))
 
 
-if os.envrion.get('ALLOWED_HOSTS'):
+if os.environ.get('ALLOWED_HOSTS'):
     ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS').split(' ')
 else:
     ALLOWED_HOSTS = []
