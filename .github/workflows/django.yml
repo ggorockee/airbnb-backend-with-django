@@ -73,7 +73,7 @@ jobs:
         with:
           valueFile: 'helm-values/${{ env.APP_NAME }}/values.yaml'
           propertyPath: 'app.image.tag'
-          value: "${{ needs.build.outputs.SHA }}"
+          value: "${{ needs.build-and-push.outputs.SHA }}"
           message: 'ci: Update ${{ env.APP_NAME }} image tag to ${{ needs.build.outputs.SHA }}'
           commitChange: true
           branch: main
